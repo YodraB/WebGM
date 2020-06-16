@@ -4,11 +4,12 @@
 	<title>WebGM</title>
 	<script src="JSUtility.js"></script>
 	<script src="JSGame.js"></script>
+	<script src="JSGeneral.js"></script>
 	<script src="JSCharacter.js"></script>
 </head>
 
 <body>
-	<!--General-->
+	<!--GameStuff-->
 	<textarea id="display" rows= 10 cols=50></textarea>
 	<img src="blank.jpg" id="canvasA" style="width:100px">
 	<img src="blank.jpg" id="canvasB" style="width:100px">
@@ -29,6 +30,14 @@
 	<button onclick="damage()">Damage</button>
 	<input type="range" id="damageSlider" min="0" max="10" value="1" onchange="damageShowValue(this.value)">
 	<span id="danger">danger level 1</span>
+	<br>
+	 <!--General Generators:-->
+	<button onclick="genre()">Genre(s)</button>
+	<button onclick="eventGen()">Event</button>
+	<button onclick="setting()">Setting</button>
+	<br>
+	<button id="colorButton", onclick="colorGet()";">Color</button>
+	<button onclick="animal()">Animal</button>
 	<br>
 	<!--Chatacters-->
 	 <button onclick="character()">Character</button>
