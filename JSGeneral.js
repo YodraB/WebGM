@@ -42,6 +42,77 @@ function setting() {
  print(settingText);
 }
 
+// Item
+
+var items = ["object d'art", 'access card', 'all-terrain vehicle', 'amphora', 'ancient artifact', 'ancient bone', 'animal', 'animalistic talisman', 'apron', 'axe', 'backpack', 'badge with a sigil', 'bag of holding', 'bag of tricks', 'ball of yarn', 'barrel', 'bathtub', 'bell', 'belt with pouches', 'belt', 'bit of elastic', 'bit of string', 'black powder', 'blanket', 'blue bucket', 'blue sphere', 'boat', 'boat', 'bolt of cloth', 'bolt', 'bomb', 'book of riddles', 'bottle', 'bottle of a beverage', 'bottle of oil', 'bottle of pills', 'box making small noises', 'box of chocolates', 'brown backpack', 'bucket', 'buckle', 'bulky glasses', 'bundle of netting', 'cable', 'calculator', 'carnivorous animal', 'cheap trinket', 'chisel', 'cleaning implement', 'coffin', 'coil of rope', 'communication device', 'complex puzzle', 'container of tea', 'cooling apparatus', 'cortical implant', 'crossbow', 'crowbar', 'crown', 'crystal sphere', 'crystal', 'cudgel', 'curious biological remnant', 'dagger', 'dangling earring', 'decent amount of water', 'deck of cards', 'decorative comb', 'deoderant', 'device with many buttons', 'distance-seeing tool', 'doll', 'domesticated animal', 'dress', 'drinking glass', 'dusting of sulphur', 'energy source', 'exotic plant', 'exotic portal', 'exotic weapon', 'expensive writing implement', 'extra-ordinary shield', 'fainting couch', 'feather', 'fiendish puzzle-box', 'filtering device', 'fine chain', 'fire starter', 'first aid kit', 'fishing gear', 'fishing rod', 'flag', 'flail', 'flare', 'flask of unknown liquid', 'flower', 'flying animal', 'flying craft', 'folding chair', 'folding fan', 'form of hovering transportation', 'form of skin protection', 'fossil', 'gardening tool', 'general-purpose adhesive', 'giant gong', 'glider', 'goblet', 'grappling hook', 'green backpack', 'grooming kit', 'gun', 'hairbrush', 'hammer', 'hammock', 'hankie', 'harpoon', 'hat', 'headscarf', 'heating apparatus', 'heavy chain', 'helmet', 'holy symbol', 'holy text', 'hookah', 'horn', 'huge statue', 'image-capturing device', 'implement of legend', 'important message', 'inner tube', 'intelligent item', 'interesting rock', 'interesting text', 'intriguing lure', 'item of clothing', 'item of fine lace', 'jar of preserves', 'jewelled necklace', 'jewelry box', 'joke item', 'jug', 'jumpsuit', 'key', 'kind of harness', 'kit of art supplies', 'knife', 'ladder', 'large animal', 'large bag', 'large basin', 'large kite', 'light shirt', 'light source', 'lock', 'lockbox', 'locket', 'long pole', 'lucky ticket', 'mace', 'magnifying glass', 'map', 'marble', 'mask', 'maul', 'mechanical spare part', 'metal bucket', 'metal spike', 'minature world', 'mirror', 'moving picture', 'mug', 'multi-function tool', 'musical instrument', 'mysterious paste', 'mysterious spore', 'native artifact', 'navigational aid', 'nut', 'official certificate', 'old memento', 'orb of power', 'other-planar scanner', 'package of spices', 'package of trail rations', 'packet of biscuits', 'packet of jerky', 'painting', 'pair of gloves', 'pair of goggles', 'pair of handcuffs', 'pair of nunchuks', 'pair of pants', 'pair of scissors', 'pair of shoes', 'pair of socks', 'pair of strange glasses', 'pair of sturdy waterproof shoes', 'pair of underwear', 'pair of working boots', 'part of a crumbling wall', 'periscope', 'picnic lunch', 'piece of candy', 'peice of chalk', 'piece of ceremonial clothing', 'piece of climbing equipment', 'piece of cold weather gear', 'piece of equipment for travelling through snow', 'piece of fruit', 'piece of jewelry', 'piece of meat', 'piece of riding equipment', 'piece of rotting food', 'piece of scrap metal', 'piece of traditional art', 'pile of detritus', 'pile of dust', 'pillow', 'pin', 'pipe', 'portable shelter', 'portrait', 'pouch', 'power tool', 'powerful ointment', 'powerful talisman', 'powerful weapon', 'precious statue', 'private journal', 'projectile weapon', 'protective field', 'raft', 'red sphere', 'religious artifact', 'riding animal', 'rift-born sphere', 'ring of power', 'ring', 'robe', 'rocking chair', 'rod', 'rubber ball', 'saber', 'sash', 'scimitar', 'screw', 'seed', 'set of armor', 'set of chimes', 'set of dice', 'shell', 'shimmering sphere', 'shiny coin', 'ship', 'shortsword', 'shovel', 'sickle', 'signaling device', 'simple case', 'skirt', 'sled', 'sleeping bag', 'small animal', 'small bell', 'small bottle of perfume', 'small purse', 'small statue', 'soft toy', 'spatula', 'special soap', 'spigot', 'spool of string', 'sprig of a plant', 'star chart', 'stunning flower', 'sturdy pack', 'stylish hat', 'stylized mask', 'supply of ammunition', 'sword', 'tacky knick-knack', 'thick gel', 'tight spring', 'time-keeping method', 'tin', 'tough rope', 'towel', 'toy weapon', 'tranquilizer', 'travel record', 'tribal artifact', 'trowel', 'two-handed sword', 'type of medicine', 'ugly sweater', 'umbrella', 'unusual hat', 'vermin repellant', 'vial of acid', 'vial of poison', 'vial of solvent', 'vital signs monitor', 'vitamin supplement', 'vizer', 'walking stick', 'wall decoration', 'warm beverage', 'watch', 'whip', 'whistle', 'wide bangle', 'wig', 'wind-up automoton', 'woven basket', 'wrench', 'writing implement']
+
+function genItem() {
+ var item = aan(randomPick(items));
+ print(item);
+}
+
+// Quest
+
+var questTypeList = ['return', 'retrieve', 'destroy', 'steal', 'find and explore', 'explore', 'clear out', 'rescue', 'escort', 'prevent the plans of', 'spy on', 'negotiate with', 'survive', 'escape from', 'investigate', 'discover the fate of', 'expose the secrets of', 'research', 'hunt down', 'protect']
+// 'put a stop to'
+
+var questItems = [ "object d'art", 'ancient artifact', 'ancient bone', 'ancient monument', 'ancient tome', 'animal', 'animalistic talisman', 'axe', 'axe', 'badge with a sigil', 'bell', 'belt', 'black powder', 'blanket', 'blue sphere', 'boat', 'bomb', 'book of riddles', 'bottle of pills', 'box making small noises', 'bulky glasses', 'calculator', 'carnivorous animal', 'cheap trinket', 'coffin', 'coil of rope', 'communication device', 'container of tea', 'crown', 'crystal sphere', 'crystal', 'cudgel', 'curious biological remnant', 'dagger', 'dangling earring', 'decent amount of water', 'deck of cards', 'decorative comb', 'device with many buttons', 'distance-seeing tool', 'doll', 'domesticated animal', 'energy source', 'exotic portal', 'exotic weapon', 'expensive writing implement', 'extra-ordinary shield', 'feather', 'fiendish puzzle-box', 'filtering device', 'fine chain', 'fire starter', 'flag', 'flail', 'flask of unknown liquid', 'flying animal', 'flying craft', 'folding fan', 'form of hovering transportation', 'fossil', 'fruit', 'gardening tool', 'giant gong', 'goblet', 'gun', 'hammer', 'harpoon', 'headscarf', 'headscarf', 'heavy chain', 'helmet', 'holy symbol', 'holy text', 'hookah', 'horn', 'huge statue', 'implement of legend', 'important files', 'important message', 'intelligent item', 'interesting text', 'intriguing lure', 'item of clothing', 'item of fine lace', 'jewelled necklace', 'jewelry box', 'key', 'knife', 'large animal', 'large basin', 'lock', 'lockbox', 'locket', 'lucky ticket', 'mace', 'map', 'mask', 'maul', 'minature world', 'mirror', 'moving picture', 'multi-function tool', 'musical instrument', 'mysterious flower', 'mysterious paste', 'mysterious spore', 'native artifact', 'navigational aid', 'official certificate', 'official document', 'old memento', 'orb of power', 'package of spices', 'painting', 'pair of gloves', 'pair of gloves', 'pair of goggles', 'pair of nunchuks', 'pair of strange glasses', 'piece of ceremonial clothing', 'piece of fruit', 'piece of traditional art', 'pillow', 'portrait', 'pouch', 'powerful ointment', 'powerful talisman', 'powerful weapon', 'precious art supplies', 'precious statue', 'private journal', 'projectile weapon', 'protective field', 'red sphere', 'religious artifact', 'riding animal', 'ring of power', 'ring', 'rod', 'saber', 'sash', 'scimitar', 'seed', 'set of armor', 'shell', 'shell', 'shimmering sphere', 'ship', 'shortsword', 'shovel', 'sickle', 'signaling device', 'simple case', 'small animal', 'small bell', 'small bottle of perfume', 'small purse', 'small statue', 'spool of string', 'sprig of a plant', 'star chart', 'stone', 'stunning flower', 'stylized mask', 'sword', 'sword', 'tablet with important writings', 'tacky knick-knack', 'thick gel', 'tranquilizer', 'travel record', 'tribal artifact', 'two-handed sword', 'type of medicine', 'vial of acid', 'vial of poison', 'vial of solvent', 'vizer', 'walking stick', 'wall decoration', 'watch', 'watch', 'weapon', 'whip', 'whistle', 'wide bangle', 'wind-up automoton', 'writing implement']
+
+var questSettings = [ 'a back alley', 'a beach', 'a black market', 'a bountiful kingdom', 'a brothel', 'a bunker', 'a burned building', 'a bustling metropolis', 'a canyon', 'a castle', 'a cave', 'a cemetery', 'a church', 'a city beneath the waves', 'a city', 'a conservatory', 'a crack in the wall', 'a den of dangerous beasts', 'a domed city', 'a dungeon', 'a factory', 'a farm', 'a floating city', 'a forbidden chamber', 'a forsaken wasteland', 'a fortress', 'a garbage dump', 'a great estate', 'a hidden compartment', 'a hunting retreat', 'a lake', 'a land above the clouds', 'a library', 'a lonely outpost', 'a mansion', 'a monastery', 'a morgue', 'a mountaintop', 'a museum of curiosities', 'a mysterious shop', 'a pit', 'a power station', 'a prison', 'a relic in space', 'a research facility', 'a resort', 'a rift in time', 'a ruined ship', 'a sacred spot', 'a sanitarium', 'a school', 'a secluded clearing', 'a seeming utopia', 'a sentient location', 'a sewer', 'a shifting labyrinth', 'a shrine', 'a squalid hovel', 'a sumptuous garden', 'a swamp', 'a swanky hotel', 'a tall building', 'a temperate forest', 'a trading post', 'a volcano', 'a war-torn countryside', 'a waterfall', 'a workshop', 'an abandoned building', 'an abandoned hospital', 'an ancient archive', 'an ancient monument', 'an apothecary', 'an island', 'an observation dome', 'mysterious ruins', 'river rapids', 'stormy seas', 'the arctic', 'the desert', 'the plains', 'the rainforest', 'the savanna', 'the underground']
+
+var survive = ['an icy winter', 'a deadly plague', 'a bandit attack', 'a terrible storm', 'a famine', 'a war', 'a coup', ' a government collapse', 'a volcano', 'a typhoon', 'an invasion', 'a new dark age', 'an assasination attempt', 'a week with your family', 'in a web of deception', 'a trek across the desert', 'a horrific betrayal', 'an uprising', 'in endless night', 'a plague of locusts']
+
+// creature/monster
+
+function quest() {
+ var questType = randomPick(questTypeList);
+ var questText = '';
+ var item = aan(randomPick(questItems))
+ var loc = randomPick(questSettings)
+ var obstacle = randomPick(survive)
+ var age = randomPick(ages)
+ var sex = randomPick(sexes)
+ var char = ''
+ if (age == 'small child' || age == 'child' || age == 'teenager' && sex != 'person of unusual gender'){
+   char = aan(randomPick(characteristics)) + ' ' + sex + ' ' + age
+ } else {
+   char = aan(randomPick(characteristics)) + ' ' + age + ' ' + sex
+ }
+
+ switch(true) {
+   case (questType == 'return' || questType == 'retrieve' || questType == 'destroy' || questType == 'steal'): // item only quests
+     questText = questType + ' ' + item;
+     break;
+   case (questType == 'find and explore' || questType == 'explore' || questType == 'clear out'): // item only
+     questText = questType + ' ' + loc;
+     break;
+   case (questType == 'rescue' || questType == 'escort' || questType == 'prevent the plans of' || questType == 'spy on' || questType == 'negotiate with'): // char only
+     questText = questType + ' ' + char;
+     humanYN = Math.random()
+     if (humanYN > 0.75) {
+       questText += ' of an unusual or monstrous species'
+     }
+     break;
+   case ( questType == 'survive'): // obstacle only
+     questText = questType + ' ' + obstacle;
+     break;
+   case (questType == 'escape from'):
+     escape = randomPick([loc, char]);
+     questText = questType + ' ' + escape;
+     break;
+   case (questType == 'investigate' || questType == 'discover the fate of' || questType == 'expose the secrets of' || questType == 'research' || questType == 'protect'):
+     anything = randomPick([item, loc, char]);
+     questText = questType + ' ' + anything;
+     break;
+   case (questType == 'hunt down'): // character or item
+     charItem = randomPick([char, item]);
+     questText = questType + ' ' + charItem;
+     break;
+ // prevent plans, spy on, negotiate with, escape from, hunt down
+ }
+ print(questText);
+ }
+
 //Color
 
 function colorGet() {

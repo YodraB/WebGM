@@ -53,6 +53,36 @@ function displayImage(){
  document.getElementById('canvasC').src = glyphC;
 }
 
+// Draw a card - Poker
+
+var pokerValues = ['ace', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'jack', 'queen', 'king'];
+var pokerSuites = ['spades', 'diamonds', 'clubs', 'hearts'];
+var pokerJokers = ['red joker', 'black joker'];
+
+function poker(){
+	var joker = Math.floor(Math.random() * 54);
+	var pokerCard = randomPick(pokerValues) + ' of ' + randomPick(pokerSuites)
+	if (joker > 52){
+		pokerCard = randomPick(pokerJokers);
+	}
+	print(pokerCard + joker);
+}
+
+// Draw a card - tarot
+
+var majorArcana = ['the fool', 'the magician', 'the high priestess', 'the empress', 'the emperor', 'the hierophant', 'the lovers', 'the chariot', 'strength', 'the hermit', 'wheel of fortune', 'justice', 'the hanged man', 'death', 'temperance', 'the devil', 'the tower', 'the star', 'the moon', 'the sun', 'judgement', 'the world'];
+var minorValues = ['ace', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'page', 'knight', 'queen', 'king'];
+var minorSuites = ['wands', 'cups', 'swords', 'pentacles'];
+
+function tarot(){
+	var arcana = Math.floor(Math.random() * 78);
+	var tarotCard = randomPick(minorValues) + ' of ' + randomPick(minorSuites);
+	if (arcana < 23){
+		tarotCard = randomPick(majorArcana);
+	}
+	print(tarotCard);
+}
+
 // Roll custom dice
 
 function customDice(){
