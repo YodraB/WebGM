@@ -134,7 +134,7 @@ function fudgefate() {
 
 // Damage
 
-var severity = ['life-threatening', 'life-threatening', 'critical', 'critical', 'severe', 'severe', 'moderate', 'moderate', 'moderate', 'moderate', 'moderate', 'moderate', 'minor', 'minor', 'minor', 'minor', 'minor', 'minor', 'negligible', 'negligible', 'negligible']
+var severity = ['life-threatening', 'life-threatening', 'critical', 'critical', 'critical', 'severe', 'severe','severe', 'moderate', 'moderate', 'moderate', 'moderate', 'moderate', 'moderate', 'minor', 'minor', 'minor', 'minor', 'minor', 'minor', 'negligible', 'negligible', 'negligible']
 
 var area = ['head', 'torso', 'left arm', 'right arm', 'left leg', 'right leg']
 
@@ -146,7 +146,7 @@ function damageShowValue(newValue) {
 function damage() {
  var hit = randomPick(area);
  var damageNumber = Math.floor(Math.random() * (severity.length));
- var danger = document.getElementById("damageSlider").value - 10;
+ var danger = document.getElementById("damageSlider").value - 4;
  var change = damageNumber - danger;
  if (change < 0) {
    change = 0;
